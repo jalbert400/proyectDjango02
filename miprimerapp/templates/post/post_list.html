@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Posts {% endblock %}
+{% block content %}
+<h2>Lista de datos de Posts</h2>
+    <div class="jumbotron">
+        {% for item in posts %}
+        <h2>Titulo: {{ item.title }}</h2>
+        <p>Autor: {{ item.autor }}
+            Contenido: {{ item.body }}
+        </p>
+        {% endfor %}
+    </div>
+{% endblock %}
